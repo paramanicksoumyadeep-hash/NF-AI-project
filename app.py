@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 import joblib
 
-# Load models
 flux_model = joblib.load("models/flux_model.pkl")
 rej_model = joblib.load("models/rejection_model.pkl")
 encoder = joblib.load("models/material_encoder.pkl")
@@ -11,7 +10,6 @@ st.title("AI Nanofiltration Membrane Design Predictor")
 
 st.write("Enter membrane design parameters:")
 
-# Inputs
 material = st.selectbox("Material", ["polyamide", "PES", "PVDF"])
 pressure = st.slider("Pressure (bar)", 5.0, 20.0, 10.0)
 temperature = st.slider("Temperature (°C)", 20.0, 35.0, 25.0)
