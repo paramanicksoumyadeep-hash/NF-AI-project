@@ -18,11 +18,9 @@ _, _, y_rej_train, y_rej_test = train_test_split(
     X, y_rej, test_size=0.2, random_state=42
 )
 
-# Flux model
 flux_model = RandomForestRegressor(n_estimators=200)
 flux_model.fit(X_train, y_flux_train)
 
-# Rejection model
 rej_model = RandomForestRegressor(n_estimators=200)
 rej_model.fit(X_train, y_rej_train)
 
